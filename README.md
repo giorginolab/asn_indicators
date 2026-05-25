@@ -15,8 +15,13 @@ way to guarantee that the results obtained respect all the official quirks.
 But, at least, you will get hand-checkable summary tables. Which is ironic, 
 given that this app was AI-coded.
 
+## Screenshot
 
-## `scripts/asn_indicators.py`
+<img width="1446" height="1636" alt="Screenshot 2026-05-25 at 12-38-01 ASN Indicators" src="https://github.com/user-attachments/assets/4ccbd385-eece-4b72-9954-f8d0ba34e356" />
+
+
+
+## Python version: `scripts/asn_indicators.py`
 
 Computes ASN-style bibliometric indicators from a Scopus CSV export.
 

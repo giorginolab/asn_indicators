@@ -1,25 +1,20 @@
-# asn_mediane
-Altra burocrazia
+# Calcolo indicatori ASN
 
-## Web app
 
-This repository includes a static JavaScript app that can be served directly
-from GitHub Pages. Open `web/index.html`, upload a Scopus CSV export, and the app
-will show the ASN summary report plus the detailed tables.
+This **unofficial** and **untested** and **unguaranteed** app 
+computes bibliometric values for Italian ASN-like machinery on the basis of 
+a SCOPUS-exported file. 
 
-To prepare the input file, open the publication list in Scopus, use
-**Export CSV**, and upload the resulting CSV file in the browser. The file is
-processed locally by JavaScript; it is not sent to a server.
+Available online at https://giorginolab.github.io/asn_indicators/
 
-For GitHub Pages, this repository includes a workflow at
-`.github/workflows/pages.yml` that publishes the `web/` directory. In the
-repository settings, set Pages to use **GitHub Actions** as the source.
+All counts are done in-browser. By default, duplicate records are removed using Scopus `EID` or `DOI`, and
+records with Scopus document type `Erratum` are excluded.
 
-The web app files are:
+Given the opaque nature of bibliometric databases and exercises, there is no 
+way to guarantee that the results obtained respect all the official quirks.
+But, at least, you will get hand-checkable summary tables. Which is ironic, 
+given that this app was AI-coded.
 
-- `web/index.html`
-- `web/styles.css`
-- `web/app.js`
 
 ## `scripts/asn_indicators.py`
 
@@ -44,5 +39,3 @@ uv run python scripts/asn_indicators.py --include-errata
 uv run python scripts/asn_indicators.py --no-deduplicate
 ```
 
-By default, duplicate records are removed using Scopus `EID` or `DOI`, and
-records with Scopus document type `Erratum` are excluded.
